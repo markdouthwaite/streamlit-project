@@ -1,4 +1,4 @@
-.PHONY: run
+.PHONY: run run-container gcloud-deploy
 
 run:
 	@streamlit run app.py --server.port=8080
