@@ -8,5 +8,4 @@ run-container:
 	@docker run -p 8080:8080 $APP_NAME
 
 gcloud-deploy:
-	@gcloud builds submit --tag gcr.io/$(PROJECT_ID)/$(APP_NAME)
-	@gcloud run deploy --image gcr.io/$(PROJECT_ID)/$(APP_NAME) --platform managed
+	@gcloud app deploy app.yaml
