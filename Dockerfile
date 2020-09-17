@@ -12,9 +12,5 @@ RUN pip install -r app/requirements.txt
 COPY . /app
 WORKDIR /app
 
-# switch to non-root user!
-RUN useradd demo
-USER demo
-
 # run it!
 ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8080", "--server.address=0.0.0.0"]
