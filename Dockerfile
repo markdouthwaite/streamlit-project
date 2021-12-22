@@ -4,6 +4,8 @@ FROM python:3.7.8-slim
 EXPOSE 8080
 
 RUN pip install -U pip
+RUN apt-get update
+RUN apt-get -y install gcc
 
 COPY requirements.txt app/requirements.txt
 RUN pip install -r app/requirements.txt
